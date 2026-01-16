@@ -1,0 +1,31 @@
+rockspec_format = "3.0"
+
+package = "stileweb"
+version = "0.1.1-1"
+
+source = {
+   url = "https://github.com/SilvioNetoesBrasil/STileWeb-Browser/",
+   dir = "STileWeb-0.1.1"
+}
+
+description = {
+   summary = "Navegador web simples em Lua usando WebKit2GTK",
+   detailed = [[
+STileWeb (SilvioTileWeb Browser) é um navegador simples feito em Lua 5.3,
+utilizando GTK3 e WebKit2GTK 4.1 através da biblioteca LGI.
+   ]],
+   homepage = "https://github.com/SilvioNetoesBrasil/STileWeb-Browser/",
+   license = "MIT"
+}
+
+dependencies = {
+   "lua >= 5.3",
+   "lgi"
+}
+
+build = {
+   type = "builtin",
+   modules = {
+      ["STileWeb"] = "src/STileWeb.lua"
+   }
+}
